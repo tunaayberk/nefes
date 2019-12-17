@@ -1,0 +1,83 @@
+.blog-bg {
+  position: relative;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 300px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & h1 {
+    color: white;
+    margin-bottom: 100px;
+  }
+}
+
+.newsPageArea {
+  & .newsContent {
+    margin-bottom: 30px;
+  }
+}
+.defaultPagination {
+  margin-top: 32px;
+
+  & li a.prePost {
+    margin-right: 72px;
+  }
+  & li a.nextPost:hover,
+  & li a.prePost:hover {
+    color: #65e9c8;
+  }
+  & li a.nextPost {
+    margin-left: 72px;
+  }
+
+  & li {
+    display: inline-block;
+  }
+  & li a {
+    background: #e0ecf9 none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #6572d1;
+    display: inline-block;
+    font-size: 20px;
+    height: 45px;
+    padding-top: 7px;
+    text-align: center;
+    width: 42px;
+    border: 1px solid #e0ecf9;
+    margin-right: 5px;
+    font-weight: 400;
+  }
+  & li:last-child a {
+    margin-right: 0;
+  }
+  & li a.prePost {
+    background: #fff none repeat scroll 0 0;
+    border: medium none;
+    font-size: 60px;
+    height: 50px;
+    margin-right: 75px;
+    padding-top: 0;
+    position: relative;
+    top: 10px;
+  }
+  & li a.nextPost {
+    background: #fff;
+    border: none;
+    font-size: 60px;
+    margin-left: 75px;
+    padding-top: 0;
+    position: relative;
+    top: 10px;
+    height: 50px;
+  }
+  & li.active a,
+  & li a:hover {
+    background: #fff;
+    border-color: #5a68ce;
+    text-decoration: none;
+  }
+}

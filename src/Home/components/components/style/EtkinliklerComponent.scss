@@ -1,0 +1,172 @@
+#evenz-body {
+  & .evenz-negative {
+    color: #fff !important;
+  }
+}
+.evenz-post__event {
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  & .evenz-bgimg img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+}
+.evenz-post {
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  & .evenz-bgimg {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: -webkit-transform 0.6s ease;
+    transition: transform 0.6s ease;
+    transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  }
+
+  & .evenz-duotone::before,
+  .evenz-post .evenz-duotone::after {
+    content: " ";
+    display: block;
+    opacity: 0;
+    transition: opacity 0.35s;
+    will-change: opacity;
+  }
+}
+
+.evenz-duotone {
+  overflow: hidden;
+}
+.evenz-bgimg {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  clip: rect(0, auto, auto, 0);
+  background: #111;
+}
+
+.evenz-post__event__c {
+  display: flex;
+  padding: 14px 40px 10px 40px;
+  position: relative;
+  z-index: 20;
+  align-items: center;
+}
+.evenz-capfont {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.evenz-post__event__d {
+  color: white;
+  padding-right: 50px;
+  position: relative;
+  & span {
+    margin: 0;
+    clear: both;
+    width: 100%;
+    display: block;
+    line-height: 0.9em;
+    word-break: keep-all;
+    white-space: nowrap;
+
+    &:first-of-type {
+      font-size: 55px;
+    }
+    &:nth-of-type(2) {
+      font-size: 12px;
+      margin-top: 10px;
+    }
+    &:last-of-type {
+      font-size: 21px;
+      margin-top: 5px;
+    }
+  }
+  &::after {
+    display: block;
+    content: " ";
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.205) 12.5%,
+      transparent 12.5%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.205) 50%,
+      rgba(255, 255, 255, 0.205) 62.5%,
+      transparent 62.5%,
+      transparent 100%
+    );
+    background-size: 5px 5px;
+    top: 0;
+    right: 0;
+  }
+}
+
+.evenz-post__event__t {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 0 30px;
+  justify-content: center;
+
+  & .evenz-meta {
+    margin-top: 0;
+
+    & i:first-of-type {
+      margin-left: 0;
+      color: #ff0062;
+    }
+    & > span {
+      margin-right: 5px;
+    }
+  }
+  & h2 {
+    color: white;
+  }
+}
+
+.evenz-countdown-shortcode {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  line-height: inherit;
+}
+
+.evenz-countdown__container {
+  display: inline-block;
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: transparent;
+  margin: 0;
+}
+
+.evenz-post__event__b {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  position: relative;
+  padding: 0 20px;
+}
+
+.evenz-btn__white {
+  background-color: white;
+
+  &:hover {
+    background-color: #be024a;
+    color: white;
+  }
+}

@@ -1,0 +1,227 @@
+.active-menu {
+  display: inline-block;
+  border: 2px solid #fc0254;
+  border-radius: 30px;
+  color: #fff;
+  line-height: normal;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+.active-submenu {
+  background: #fc0254;
+  color: #fff !important;
+  border: 2px solid #fc0254;
+  border-radius: 30px;
+
+  &:hover {
+    background: #fc0254;
+    color: #fff !important;
+  }
+}
+
+.header-section {
+  padding-left: 55px;
+  padding-right: 72px;
+  background: #08192d;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 10px solid #fc0254;
+}
+
+.site-logo {
+  display: inline-block;
+  background-color: white;
+  position: relative;
+  transform: skew(-30deg);
+}
+.site-logo-class {
+  max-height: 115px;
+  transform: skew(30deg);
+}
+
+.header-right {
+  padding: 44px 0;
+
+  & .hr-btn {
+    display: inline-block;
+    color: #979aa5;
+  }
+  & .user-panel {
+    display: inline-block;
+    & a {
+      font-size: 16px;
+      color: #ffffff;
+      margin: 0 10px;
+    }
+    & .register {
+      color: #fc0254;
+      margin-right: 0;
+    }
+  }
+
+  & span {
+    color: #fff;
+    display: inline-block;
+    padding-left: 9px;
+  }
+}
+
+.main-menu {
+  list-style: none;
+  & li {
+    display: inline-block;
+    position: relative;
+
+    &.special {
+      position: unset;
+    }
+
+    &.menu-li {
+      margin-left: 10px;
+    }
+    & a {
+      display: block;
+      font-size: 16px;
+      color: #ffffff;
+      padding: 10px 20px;
+
+      &.menu-a:hover {
+        display: inline-block;
+        border-radius: 30px;
+        background: #fc0254;
+        color: #fff;
+        line-height: normal;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+    &:first-child a {
+      margin-left: 0;
+    }
+    &:hover .sub-menu {
+      visibility: visible;
+      opacity: 1;
+      margin-top: 0;
+    }
+    &:hover .mega-menu {
+      visibility: visible;
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
+
+  & .sub-menu {
+    position: absolute;
+    list-style: none;
+    width: 220px;
+    left: 0px;
+    top: 100%;
+    padding: 20px 0;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 50px;
+    background: #fff;
+    z-index: 99;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.05);
+
+    & li {
+      display: block;
+    }
+    & li a {
+      display: block;
+      color: #000;
+      margin-left: 0;
+      padding: 5px 20px;
+      white-space: nowrap;
+
+      &:hover {
+        background: #fc0254;
+        color: #fff !important;
+        text-decoration: none;
+      }
+    }
+  }
+  & .mega-menu {
+    position: absolute;
+    list-style: none;
+    width: 100%;
+    left: 0;
+    top: 125px;
+    padding: 20px 60px;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 50px;
+    background: #fff;
+    z-index: 99;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -webkit-box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    & li {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      & ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      &.submenu-a:hover {
+        background: #fc0254;
+        color: #fff !important;
+        text-decoration: none;
+      }
+      & h2 {
+        display: block;
+        padding: 5px 20px;
+        width: 100%;
+
+        &a:hover {
+          color: #fc0254;
+        }
+      }
+    }
+    & .subsub-menu {
+      position: relative;
+      list-style: none;
+
+      & li {
+        display: flex;
+        min-width: 200px;
+        min-height: 60px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+
+        &.submenu-a:hover {
+          background: #fc0254;
+          & a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+        & a {
+          display: block;
+          width: 100%;
+          color: #000;
+          margin-left: 0;
+          padding: 5px 20px;
+        }
+      }
+    }
+  }
+}
+
+.slicknav_menu {
+  display: none;
+}

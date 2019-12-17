@@ -1,0 +1,169 @@
+.how-section {
+  & .slick-list {
+    overflow: unset !important;
+  }
+  overflow: hidden;
+}
+
+h1,
+h3,
+p {
+  margin: 0;
+  text-transform: uppercase;
+}
+h1 {
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 60px;
+}
+h3 {
+  font-size: 1.5rem;
+  & span {
+    font-weight: bold;
+  }
+  margin-bottom: 5px;
+  color: #fc0254 !important;
+}
+p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.ser-wrapper {
+  display: flex;
+  flex-flow: nowrap;
+}
+/*.ser-wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 80px;
+}*/
+
+// Styling
+// =================================
+
+$letters: 7;
+$teal: #fff;
+$cubic-slow: cubic-bezier(0.7, 0.01, 0.37, 1);
+
+.roll-up {
+  overflow: hidden;
+  position: relative;
+  > span {
+    display: inline-block;
+    position: relative;
+    @for $i from 1 through $letters {
+      &:nth-child(#{$i}) {
+        transition-delay: #{$i * 0.03}s;
+      }
+    }
+    > span {
+      display: inline-block;
+      transition: 0.6s $cubic-slow;
+      transition-delay: inherit;
+      &:nth-child(1) {
+        position: relative;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        transform: translateY(100%);
+        left: 0;
+        color: $teal;
+      }
+    }
+  }
+}
+.text-reveal {
+  position: relative;
+  overflow: hidden;
+  span {
+    display: block;
+    transition: $cubic-slow 0.6s;
+  }
+  > span {
+    &:nth-child(2) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #fff;
+      > span {
+        overflow: hidden;
+        transform: translateX(-100%);
+        @for $i from 1 through $letters {
+          &:nth-child(#{$i}) {
+            transition-delay: #{$i * 0.1}s;
+          }
+        }
+        > span {
+          transform: translateX(100%);
+          transition-delay: inherit;
+        }
+      }
+    }
+  }
+}
+
+.ser-card {
+  font-family: "Montserrat", sans-serif;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  position: relative !important;
+  max-width: 450px;
+  width: 100%;
+  height: 250px;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: rgba(black, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
+    inset rgba(white, 0.5) 0 0 0 6px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  background-size: cover;
+  margin: 0 40px 60px 0;
+  &:before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .card__content {
+    z-index: 1;
+    .card__content--description {
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+      text-align: left;
+    }
+  }
+  &:hover {
+    // play button spin
+    .play-button {
+      transform: scale(1.1);
+      .polygon {
+        transform: translateZ(0px) rotate(90deg);
+        fill: #67fbbe;
+      }
+    }
+    // text roll
+    .roll-up {
+      > span {
+        > span {
+          &:nth-child(1) {
+            transform: translateY(-100%);
+          }
+          &:nth-child(2) {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+    // paragraph reveal
+    .text-reveal {
+      > span:nth-child(2) > span,
+      > span:nth-child(2) > span > span {
+        transform: translateX(0);
+      }
+    }
+  }
+}
