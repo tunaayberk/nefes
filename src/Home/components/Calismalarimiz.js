@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import Services from "../sections/Services";
 
-const HowSection = () => {
+import { I18nContext } from "../../i18n/index";
+
+const Calismalarimiz = () => {
+  const { translate } = useContext(I18nContext);
+
   return (
     <section className="how-section spad set-bg" data-setbg="img/how-to-bg.jpg">
       <div className="container">
         <div className="section-title text-white">
           <h2 style={{ fontFamily: '"Montserrat", sans-serif' }}>
-            Calismalarimiz
+            {translate("calismalarimiz")}
           </h2>
         </div>
 
@@ -18,4 +22,4 @@ const HowSection = () => {
   );
 };
 
-export default HowSection;
+export default Calismalarimiz;

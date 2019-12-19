@@ -8,7 +8,7 @@ const Slide = ({ number, header, content }) => {
   return (
     <div className="slide-bg" style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="slider-content">
-        <h1>{header}</h1>
+        <h1 style={{ color: "#08192d" }}>{header}</h1>
         {content && content.map((item, index) => <p key={index}>{item}</p>)}
       </div>
     </div>

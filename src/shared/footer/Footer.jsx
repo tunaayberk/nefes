@@ -17,9 +17,6 @@ const Footer = () => {
                       <a href="">Our Story</a>
                     </li>
                     <li>
-                      <a href="">Sol Music Blog</a>
-                    </li>
-                    <li>
                       <a href="">History</a>
                     </li>
                   </ul>
@@ -27,32 +24,20 @@ const Footer = () => {
               </div>
               <div className="col-sm-4">
                 <div className="footer-widget">
-                  <h2>Products</h2>
+                  <h2>Subscription</h2>
                   <ul>
                     <li>
-                      <a href="">Music</a>
-                    </li>
-                    <li>
                       <a href="">Subscription</a>
-                    </li>
-                    <li>
-                      <a href="">Custom Music</a>
-                    </li>
-                    <li>
-                      <a href="">Footage</a>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className="col-sm-4">
                 <div className="footer-widget">
-                  <h2>Playlists</h2>
+                  <h2>Contact</h2>
                   <ul>
                     <li>
                       <a href="">Newsletter</a>
-                    </li>
-                    <li>
-                      <a href="">Careers</a>
                     </li>
                     <li>
                       <a href="">Press</a>
@@ -66,8 +51,6 @@ const Footer = () => {
             </div>
           </div>
           <div className="col-xl-6 col-lg-5 order-lg-1">
-            <img src={Logo} alt="" />
-
             <div className="social-links">
               <a href="">
                 <i className="fa fa-instagram"></i>

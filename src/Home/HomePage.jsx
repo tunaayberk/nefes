@@ -1,17 +1,19 @@
 import React from "react";
+import Async from "react-code-splitting";
 
-import Slider from "./components/Slider";
-
-import HowSection from "./components/HowSection";
-import Konseptimiz from "./components/Konseptimiz";
-import Etkinlikler from "./components/Etkinlikler";
-import Blog from "./components/Blog";
+const Slider = () => <Async load={import("./components/Slider")} />;
+const Calismalarimiz = () => (
+  <Async load={import("./components/Calismalarimiz")} />
+);
+const Konseptimiz = () => <Async load={import("./components/Konseptimiz")} />;
+const Etkinlikler = () => <Async load={import("./components/Etkinlikler")} />;
+const Blog = () => <Async load={import("./components/Blog")} />;
 
 const HomePage = () => {
   return (
     <React.Fragment>
       <Slider />
-      <HowSection />
+      <Calismalarimiz />
       <Konseptimiz />
       <Etkinlikler />
       <Blog />

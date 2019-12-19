@@ -35,6 +35,7 @@ const Services = () => {
     setContent(data[cid].content);
   }, [window.location.pathname]);
 
+  window.scrollTo(0, 0);
   return (
     <React.Fragment>
       <ServicesHeader title={title} category={category} />

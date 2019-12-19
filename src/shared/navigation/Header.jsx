@@ -1,7 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-
-import capitalizeFirstLetter from "../../shared/functions/capitalizeFirstLetter";
 
 import "./styles/Header.scss";
 
@@ -9,9 +7,14 @@ import ourservices, { services } from "../../Services/data/ourservices";
 import ourevents from "../../Services/data/ourevents";
 
 import Logo from "../../assets/images/sitebanner.png";
+import LanguageChanger from "./components/LanguageChanger";
+
+import { I18nContext } from "../../i18n/index";
 
 const Header = () => {
   const servicesState = services();
+
+  const { translate } = useContext(I18nContext);
 
   return (
     <header className="header-section">
@@ -27,20 +30,20 @@ const Header = () => {
             exact
             to="/"
           >
-            Anasayfa
+            {translate("anasayfa")}
           </NavLink>
         </li>
 
         <li className="menu-li special">
           <NavLink className="menu-a" exact to="/">
-            Çalışmalarımız
+            {translate("calismalarimiz")}
           </NavLink>
           <ul className="mega-menu">
             {Object.keys(servicesState).map(serviceCat => {
               return (
                 <li key={serviceCat}>
                   <h2 className="submenu-a">
-                    {capitalizeFirstLetter(serviceCat)} Çalışmalar
+                    {translate(`${serviceCat}_calismalar`)}
                   </h2>
                   <ul className="subsub-menu">
                     {servicesState[serviceCat].map((service, index) => {
@@ -51,7 +54,9 @@ const Header = () => {
                             to={`/${serviceCat}/${service}`}
                             activeClassName="active-submenu"
                           >
-                            {ourservices[serviceCat][service].title}
+                            {translate(
+                              `${ourservices[serviceCat][service].translate}`
+                            )}
                           </NavLink>
                         </li>
                       );
@@ -64,7 +69,7 @@ const Header = () => {
         </li>
         <li className="menu-li special">
           <NavLink className="menu-a" exact to="/">
-            Etkinliklerimiz
+            {translate("etkinliklerimiz")}
           </NavLink>
           <ul className="mega-menu">
             <li>
@@ -78,7 +83,7 @@ const Header = () => {
                         to={`/etkinlik/${event}`}
                         activeClassName="active-submenu"
                       >
-                        {ourevents[event].title}
+                        {translate(`${ourevents[event].translate}`)}
                       </NavLink>
                     </li>
                   );
@@ -94,12 +99,12 @@ const Header = () => {
             to="/blog"
             activeClassName="active-menu"
           >
-            Blog
+            {translate("blog")}
           </NavLink>
         </li>
         <li className="menu-li">
           <NavLink className="menu-a" exact to="/">
-            Biz Kimiz
+            {translate("biz_kimiz")}
           </NavLink>
           <ul className="sub-menu">
             <li>
@@ -138,26 +143,15 @@ const Header = () => {
           <NavLink
             className="menu-a"
             exact
-            to="/"
+            to="/iletisim"
             activeClassName="active-menu"
           >
-            İletişim
+            {translate("iletisim")}
           </NavLink>
         </li>
       </ul>
       <div className="header-right">
-        <a href="#" className="hr-btn">
-          Help
-        </a>
-        <span>|</span>
-        <div className="user-panel">
-          <a href="" className="login">
-            Login
-          </a>
-          <a href="" className="register">
-            Create an account
-          </a>
-        </div>
+        <LanguageChanger />
       </div>
     </header>
   );

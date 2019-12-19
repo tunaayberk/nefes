@@ -26,6 +26,7 @@ const Services = () => {
         imgUrl="https://d21950x0o1sh55.cloudfront.net/assets/home/game-0e307d71d9838e8fbe4927b551f119bcd9e4748f2c2b70c7b81846702996ef94.jpg"
         title="REIKI"
         desc={["BILINÇALTI SÜREÇLERININ ", "ÇÖZÜLMESINE YARDIMCI OLUNUR"]}
+        link="/bireysel/reiki-mental"
       />
       <Card
         imgUrl="https://d21950x0o1sh55.cloudfront.net/uploads/inside_exclusif/picture/26/desktop_VALERIAN_BNP_68.jpg"
@@ -35,6 +36,7 @@ const Services = () => {
           "DUYGUSAL VE RUHSAL ",
           "DÜZLEMDE ÖZGÜRLEŞMEKTIR"
         ]}
+        link="/bireysel/regresyon"
       />
       <Card
         imgUrl="https://d21950x0o1sh55.cloudfront.net/uploads/inside_exclusif/picture/50/desktop_guided_tour_2.jpg"
@@ -44,11 +46,13 @@ const Services = () => {
           "NOKTALARINDA BÜTÜN ORGANLARIMIZIN",
           "HARITASI BULUNMAKTADIR"
         ]}
+        link="/bireysel/refleksoloji"
       />
       <Card
         imgUrl="https://d21950x0o1sh55.cloudfront.net/assets/home/game-0e307d71d9838e8fbe4927b551f119bcd9e4748f2c2b70c7b81846702996ef94.jpg"
         title="REIKI"
         desc={["BILINÇALTI SÜREÇLERININ ", "ÇÖZÜLMESINE YARDIMCI OLUNUR"]}
+        link="/bireysel/reiki-mental"
       />
       <Card
         imgUrl="https://d21950x0o1sh55.cloudfront.net/uploads/inside_exclusif/picture/26/desktop_VALERIAN_BNP_68.jpg"
@@ -58,6 +62,7 @@ const Services = () => {
           "DUYGUSAL VE RUHSAL ",
           "DÜZLEMDE ÖZGÜRLEŞMEKTIR"
         ]}
+        link="/bireysel/regresyon"
       />
       <Card
         imgUrl="https://d21950x0o1sh55.cloudfront.net/uploads/inside_exclusif/picture/50/desktop_guided_tour_2.jpg"
@@ -67,6 +72,7 @@ const Services = () => {
           "NOKTALARINDA BÜTÜN ORGANLARIMIZIN",
           "HARITASI BULUNMAKTADIR"
         ]}
+        link="/bireysel/refleksoloji"
       />
     </Slider>
   );

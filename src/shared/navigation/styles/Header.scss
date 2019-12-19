@@ -44,6 +44,7 @@
 
 .header-right {
   padding: 44px 0;
+  display: flex;
 
   & .hr-btn {
     display: inline-block;
@@ -224,4 +225,13 @@
 
 .slicknav_menu {
   display: none;
+}
+
+.flag {
+  width: 15%;
+  cursor: pointer;
+  &.active {
+    border: 3px solid #fff;
+    border-radius: 40px;
+  }
 }
